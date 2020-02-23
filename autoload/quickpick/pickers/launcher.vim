@@ -34,7 +34,6 @@ endfunction
 
 function! s:on_accept(id, action, data) abort
     call quickpick#close(a:id)
-    echo a:data['items']
     let cmd = a:data['items'][0]['user_data']
     if cmd =~ '^!'
         silent execute cmd
