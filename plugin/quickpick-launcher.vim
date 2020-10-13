@@ -1,10 +1,9 @@
 if exists('g:quickpick_launcher')
-    finish
+  finish
 endif
 let g:quickpick_launcher = 1
 
-command! Plauncher call quickpick#pickers#launcher#show()
+command! Plauncher call quickpick#pickers#launcher#open()
 nnoremap <plug>(quickpick-launcher) :<c-u>Plauncher<cr>
-if !hasmapto('<plug>(quickpick-launcher)')
-  nmap <c-e> <plug>(quickpick-launcher)
-endif
+
+" vim: tabstop=2 shiftwidth=2 expandtab
